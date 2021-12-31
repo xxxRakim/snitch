@@ -12,9 +12,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import regex
 
-def main(url):
+def main(url,key,password):
     # url="https://music.163.com/playlist?id=2086570274"
-    cookie=cookies()
+    cookie=cookies(key,password)
     getsong_artist(url,cookie)
 
 def get_web(key,password):
@@ -86,7 +86,7 @@ def get_web(key,password):
 
 
 
-def cookies():
+def cookies(key,password):
     driver=webdriver.Chrome('C:/Users\98115/tutorial-env/snitch/snitch/spiders/chromedriver.exe')
 
     driver.get("https://music.163.com/")
@@ -123,8 +123,8 @@ def cookies():
         # 输入账号密码
         #key=input("please enter ur key ")
         #password=input("please enter ur password ")
-    driver.find_element_by_css_selector("#p").send_keys("13307335968")
-    driver.find_element_by_css_selector("#pw").send_keys("swagkilla2333")
+    driver.find_element_by_css_selector("#p").send_keys(key)
+    driver.find_element_by_css_selector("#pw").send_keys(password)
     time.sleep(0.3)
 
         # 点击登录

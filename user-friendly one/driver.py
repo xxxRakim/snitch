@@ -12,7 +12,7 @@ def main():
 
     url=get_playlist.get_web(netEast_key,netEast_password)
     true_url=url.replace('/#','')
-    get_playlist.main(true_url)
+    get_playlist.main(true_url,netEast_key,netEast_password)
     To_spotify.main(s_key,s_password)
 
 root = Tk()
