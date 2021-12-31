@@ -1,5 +1,6 @@
 # snitch
 synchronize ur playlist in NetEast and Spotify
+将网易云音乐 你喜欢的歌曲这个歌单同步到你的Spotify账号
 想要简单方便的就下载user-friendly folder, run driver.py就行
 会有一个简易的GUI来输入一些必要信息，再点击start即可
 注意网易云登陆密码是和手机号绑定的那个登陆密码
